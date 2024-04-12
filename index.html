@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Newsletter sign-up form with success message</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Main Card -->
+    <div class="card">
+      <div class="right-side">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class="list">
+          <li>
+            <img src="assets/images/icon-list.svg" alt="" />
+            <span>Product discovery and building what matters</span>
+          </li>
+          <li>
+            <img src="assets/images/icon-list.svg" alt="" />
+            <span>Measuring to ensure updates are a success</span>
+          </li>
+          <li>
+            <img src="assets/images/icon-list.svg" alt="" />
+            <span>And much more!</span>
+          </li>
+        </ul>
+
+        <div class="form">
+          <div class="label-txt">
+            <span class="label">Email address</span>
+            <span class="notValid"></span>
+          </div>
+          <input
+            onfocus="reset()"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+          />
+          <button class="btn" onclick="checkValidation()">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+      </div>
+      <div class="left-side">
+        <img
+          class="lg-device"
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="illustration"
+        />
+        <img
+          class="sm-device"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt="illustration"
+        />
+      </div>
+    </div>
+
+    <!-- Thanks Card -->
+    <div class="thanks-card">
+      <img src="assets/images/icon-success.svg" alt="Success" />
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span class="user-email"></span> Please open it and click the button
+        inside to confirm your subscription.
+      </p>
+      <button class="btn">Dismiss message</button>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/Andrew801168" target="_blank">Zaro</a>.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

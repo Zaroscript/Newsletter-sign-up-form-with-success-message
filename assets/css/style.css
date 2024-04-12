@@ -1,0 +1,253 @@
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--Charcoal-Grey);
+
+}
+
+.btn {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: none;
+  font-weight: bold;
+  color: var(--White);
+  background-color: var(--Dark-Slate-Grey);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #ff537a, #ff693e);
+  box-shadow: 0px 10px 10px #fed2d0;
+}
+
+
+/* Main Card */
+
+
+.card {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--White);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+  .card {
+    position: unset;
+    transform: unset;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 0;
+    gap: 20px;
+    border-radius: 0;
+  }
+}
+
+.left-side {
+  width: 50%;
+}
+
+.left-side .sm-device {
+  display: none;
+}
+
+.left-side .lg-device {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    width: 0;
+  }
+  .left-side .lg-device {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .left-side {
+    width: 100%;
+    height: 30vh;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+  }
+  .left-side .sm-device {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-fit: content;
+  }
+}
+
+.right-side {
+  padding: 30px;
+}
+
+
+
+.right-side > h1 {
+  font-size: 3rem;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 20px;
+}
+
+.right-side > p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--Charcoal-Grey);
+  margin-bottom: 20px;
+}
+
+.right-side .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.right-side .list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.2rem;
+  color: var(--Charcoal-Grey);
+}
+
+.right-side .form .label-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.right-side .form .label-txt .label {
+  color: var(--Charcoal-Grey);
+}
+
+.right-side .form .label-txt .notValid {
+  color: #f6796f;
+}
+
+.right-side .form input {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--Grey);
+}
+
+.right-side .form input.notValid {
+  background-color: #ffe8e6;
+  color: #f6796f;
+  border-color: #f6796f;
+}
+
+.right-side .form input:focus {
+  border-color: #4d4b54;
+  outline: none;
+}
+
+
+
+
+/* Thanks Card */
+
+.thanks-card {
+  display: none;
+  width: 400px;
+  background-color: var(--White);
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.thanks-card > img {
+  width: max-content;
+  margin-bottom: 30px;
+}
+
+.thanks-card > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 20px;
+}
+
+.thanks-card > p {
+  font-size: 1rem;
+  color: var(--Charcoal-Grey);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.thanks-card .user-email {
+  color: var(--Dark-Slate-Grey);
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .thanks-card {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .thanks-card .btn {
+    margin-top: 200px;
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: var(--Grey);
+}
+.attribution a {
+  color: var(--Tomato);
+  text-decoration: none;
+}
